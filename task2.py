@@ -1,3 +1,4 @@
+import time
 #Динамічного програмування
 def find_min_coins(amount):
     coins = [50, 25, 10, 5, 2, 1]
@@ -25,3 +26,10 @@ def find_min_coins(amount):
 # Приклад використання
 amount = 113
 print(find_min_coins(amount))
+
+start_time = time.time()
+dp_result = find_min_coins(amount)
+dp_time = time.time() - start_time
+
+print("Алгоритм динамічного програмування результат:", dp_result)
+print("Час виконання алгоритму динамічного програмування: {:.6f} секунд".format(dp_time))
